@@ -1,0 +1,33 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main(){
+    while (1)
+    {
+        int n,m;
+        cin>>n>>m;
+        if(n==0 && m==0)break;
+        else{
+            map<int,int>mp;
+            while(n--){
+                int x;
+                cin>>x;
+                mp[x]++;
+            }
+            while (m--)
+            {
+                int x;
+                cin>>x;
+                mp[x]++;
+            }
+            int ans=0;
+            for(auto it=mp.begin(); it!=mp.end(); it++){
+                if(it->second>1){
+                    ans++;
+                }
+            }
+            cout<<ans<<endl;
+        }
+    }
+    
+}
